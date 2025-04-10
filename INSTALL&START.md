@@ -1,10 +1,8 @@
 The code was tested on Ubuntu 16.04, with Anaconda Python 3.6 and PyTorch v1.0.0. NVIDIA GPUs are needed for both training and testing. To replicate the environment, we containerized the setup using a Docker image, making it easier to manage dependencies and ensure reproducibility.
 
-```markdown
 <INSTALL>
 
 - Compile deformable convolutional (from DCNv2).
-
 ```bash
 # git clone https://github.com/CharlesShang/DCNv2/
 cd $RTM3D_3DShipDetection/src/lib/models/networks/
