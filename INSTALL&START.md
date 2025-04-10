@@ -6,8 +6,7 @@ INSTALL
 - Compile deformable convolutional (from DCNv2).
 ```bash
 # git clone https://github.com/CharlesShang/DCNv2/
-cd $RTM3D_3DShipDetection/src/lib/models/networks/
-cd DCNv2
+cd $RTM3D_3DShipDetection/src/lib/models/networks/DCNv2
 ./make.sh
 ```
   
