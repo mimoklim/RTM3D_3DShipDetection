@@ -2,7 +2,9 @@
 
 This project is based on [RTM3D](https://github.com/Banconxuan/RTM3D), originally developed for monocular 3D object detection in autonomous driving.
 
-It has been modified and adapted for 3D ship detection tasks.
+It has been modified and adapted for 3D ship detection tasks. 
+
+For installation and getting started, please follow the instructions in [INSTALL.md](INSTALL&START.md).
 
 Original code is licensed under the MIT License.
 
