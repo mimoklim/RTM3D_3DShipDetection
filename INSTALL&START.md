@@ -1,6 +1,7 @@
 The code was tested on Ubuntu 16.04, with Anaconda Python 3.6 and PyTorch v1.0.0. NVIDIA GPUs are needed for both training and testing. To replicate the environment, we containerized the setup using a Docker image, making it easier to manage dependencies and ensure reproducibility.
 
-<INSTALL>
+INSTALL
+==================
 
 - Compile deformable convolutional (from DCNv2).
 ```bash
@@ -16,9 +17,11 @@ cd $RTM3D_3DShipDetection/src/lib/utiles/iou3d
 python setup.py install
 ```
 
-<START>
+GETTING START
+==================
 
-Training & Testing & Evaluation
+Training
+------------
 - Training by python with multiple GPUs in a machine
 Run following command to train model with ResNet-18 backbone.
 ```bash
@@ -30,15 +33,18 @@ python ./src/main.py --data_dir ./kitti_format --exp_id KM3D_dla34 --arch dla_34
 ```
 
 Visualization
-Run following command for visualization.
+------------
+Run following command to visualization with ResNet-18 backbone.
 ```bash
-# ResNet-18 backbone
 python ./src/faster.py --vis --demo ./kitti_format/data/kitti/val.txt --data_dir ./kitti_format --calib_dir ./kitti_format/data/kitti/calib/ --load_model ./kitti_format/exp/KM3D_res18/model_last.pth --gpus 0 --arch res_18
-# or DLA-3D backbone
+```
+Run following command to visualization with DLA-34 backbone.
+```bash
 python ./src/faster.py --vis --demo ./kitti_format/data/kitti/val.txt --data_dir ./kitti_format --calib_dir ./kitti_format/data/kitti/calib/ --load_model ./kitti_format/exp/KM3D_dla34/model_last.pth --gpus 0 --arch res_18
 ```
 
 Evaluation
+------------
 Run following command for evaluation.
 ```bash
 python ./src/tools/kitti-object-eval-python/evaluate.py evaluate --label_path=./kitti_format/data/kitti/label/ --label_split_file ./ImageSets/val.txt --current_class=0,1,2 --coco=False --result_path=./kitti_format/exp/results/data/
